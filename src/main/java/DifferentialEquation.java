@@ -20,7 +20,7 @@ public class DifferentialEquation {
 
     static void advancedEulerMethod1() {
         leftBoard = x0;
-        sumX = (int) ((rightBoard - x0) * 10) + 1;
+        sumX = (int) ((rightBoard - x0) * 10 + 1) ;
         double[] xData = new double[sumX];
         double[] yData = new double[sumX];
         int p = 0;
