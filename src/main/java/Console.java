@@ -4,8 +4,8 @@ public class Console {
 
     public static void main(String[] args) {
         System.out.println("Выберите тип уравнения:\n" +
-                "1: y' + y - 7 * exp(x) = 0\n" +
-                "2: y' - (x^2 + 2 * x + y) = 0");
+                "1: y' - y/x + 3 = 0\n" +
+                "2: y' - (x * y) = 0");
         Scanner scanner = new Scanner(System.in);
         int type = scanner.nextInt();
         if (type == 1) {
@@ -29,11 +29,11 @@ public class Console {
             System.out.println("Таблица:");
             for (int i = -1; i < DifferentialEquation.n; i++) {
                 if (i == -1) {
-                    System.out.format("| %2s | %8s | %10s | %10s |", "i", "x", "y", "y'");
+                    System.out.format("| %2s | %8s | %10s |", "i", "x", "y'");
                     System.out.println();
                     System.out.println("-------------------------------------------");
                 }else {
-                    System.out.format("| %-2d | %-8f | %-10f | %-10f |", i, DifferentialEquation.xInter[i], DifferentialEquation.ySimple[i], DifferentialEquation.yInter[i]);
+                    System.out.format("| %-2d | %-8f | %-10f |", i, DifferentialEquation.xInter[i], DifferentialEquation.yInter[i]);
                     System.out.println();
                 }
             }
@@ -59,11 +59,11 @@ public class Console {
             System.out.println("Таблица:");
             for (int i = -1; i < DifferentialEquation.n; i++) {
                 if (i == -1) {
-                    System.out.format("| %2s | %8s | %10s | %10s |", "i", "x", "y", "y'");
+                    System.out.format("| %2s | %8s | %10s |", "i", "x", "y'");
                     System.out.println();
                     System.out.println("-------------------------------------------------");
                 }else {
-                    System.out.format("| %-2d | %-8f | %-14f | %-14f |", i, DifferentialEquation.xInter[i], DifferentialEquation.ySimple[i], DifferentialEquation.yInter[i]);
+                    System.out.format("| %-2d | %-8f | %-14f |", i, DifferentialEquation.xInter[i], DifferentialEquation.yInter[i]);
                     System.out.println();
                 }
             }
